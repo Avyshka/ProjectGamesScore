@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="ProjectGamesScore">
+    <configurations>
+      <configuration name="ProjectGamesScore" target-platform="Mobile" pure-as="true" main-class="by.src.Main" output-file="ProjectGamesScore.swf" output-folder="$MODULE_DIR$/bin/production/ProjectGamesScore">
+        <dependencies target-player="29.0">
+          <entries>
+            <entry library-id="bb9b363f-37b5-4e17-8985-de1f42d39920">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler_29" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/main-app.xml" package-file-name="ProjectGamesScore">
+          <files-to-package>
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/data/iconsApp" path-in-package="iconsApp" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/data/img" path-in-package="img" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/icons" path-in-package="icons" />
+          </files-to-package>
+          <AirSigningOptions keystore-path="E:/desktop/google/AIVA GAMES.p12" use-temp-certificate="false" />
+        </packaging-android>
+        <packaging-ios package-file-name="ProjectGamesScore" />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/data" />
+      <excludeFolder url="file://$MODULE_DIR$/icons" />
+      <excludeFolder url="file://$MODULE_DIR$/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/others" />
+    </content>
+    <orderEntry type="jdk" jdkName="AIRSDK_Compiler_29" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="bb9b363f-37b5-4e17-8985-de1f42d39920" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/logo.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
