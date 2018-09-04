@@ -13,6 +13,7 @@
 		public static const BTN_YES: String = "Language.BTN_YES";
 		public static const BTN_NO: String = "Language.BTN_NO";
 		public static const DEL_APPROVAL: String = "Language.DEL_APPROVAL";
+		public static const END_GAME_APPROVAL: String = "Language.END_GAME_APPROVAL";
 
 		public static var current: String = "none";
 		
@@ -32,6 +33,7 @@
 			_labels[BTN_YES] = "YES";
 			_labels[BTN_NO] = "NO";
 			_labels[DEL_APPROVAL] = "DO YOU WANT TO REMOVE";
+			_labels[END_GAME_APPROVAL] = "DO YOU WANT TO END\nTHE GAME?";
 
 			current = "en";
 		}

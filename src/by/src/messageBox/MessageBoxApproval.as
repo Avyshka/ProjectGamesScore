@@ -44,6 +44,11 @@ package by.src.messageBox
 			_btnCancel.addEventListener(Event.TRIGGERED, onCancelClick);
 		}
 
+		protected function setTitleTextID(textID: String): void
+		{
+			_title.text = Language.getText(textID);
+		}
+
 		override public function free(): void
 		{
 			super.free();

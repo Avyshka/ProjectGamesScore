@@ -46,8 +46,14 @@ package by.src.balloons.controllers
 			_dispatcher.addEventListener(Events.DEL_BALLOON_REQUEST, onDelBalloonRequest);
 			_dispatcher.addEventListener(Events.CHANGE_VISIBILITY_DEL_BUTTON_BALLONS, onChangeVisibilityDelButtons);
 			_dispatcher.addEventListener(Events.GAME_TO_MIN_OR_MAX_CHANGED, onGameModeChanged);
+			_dispatcher.addEventListener(Events.START_END_GAME, onEndGame);
 
 			new FlightManager(_vPlayerData);
+		}
+
+		private function onEndGame(event: Event): void
+		{
+			_dispatcher.dispatchEventWith(Events.GAME_OVER, false, _vPlayerData);
 		}
 
 		private function onChangeVisibilityDelButtons(event: Event): void

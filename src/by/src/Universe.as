@@ -2,11 +2,14 @@
 {
 	import by.src.balloons.controllers.BalloonsController;
 	import by.src.balloons.managers.ParticleManager;
+	import by.src.data.PlayerData;
+	import by.src.events.Events;
 	import by.src.events.EventsDispatcher;
 	import by.src.map.MapView;
 	import by.src.menu.TopLeftMenu;
 	import by.src.menu.TopRightMenu;
 	import by.src.messageBox.managers.MessageBoxManager;
+	import by.src.scores.Scores;
 
 	import starling.display.Sprite;
 	import starling.events.*;
@@ -67,6 +70,14 @@
 			new MessageBoxManager();
 			new BalloonsController();
 			new ParticleManager();
+
+			_dispatcher.addEventListener(Events.GAME_OVER, onEndGameHandler);
+		}
+
+		private function onEndGameHandler(event: Event): void
+		{
+			const vPlayerData: Vector.<PlayerData> = event.data as Vector.<PlayerData>;
+			endGame(vPlayerData);
 		}
 
 		/**
@@ -80,9 +91,13 @@
 		/**
 		 * конец игры
 		 */
-		public function endGame():void
+		public function endGame(vPlayerData: Vector.<PlayerData>):void
 		{
 			_isGameover = true;
+
+			var s: Scores = new Scores();
+			s.init(vPlayerData);
+			addChild(s);
 		}
 		
 		/**

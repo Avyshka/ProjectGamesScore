@@ -32,7 +32,7 @@ package by.src.messageBox.messageBoxes
 
 			_delBalloonData.playerName = _playerData.playerName;
 
-			_title.text = Language.getText(Language.DEL_APPROVAL);
+			setTitleTextID(Language.DEL_APPROVAL);
 			_tfPlayerName.text = GetPlayerNameWithoutIDUtils.cutPlayerName(_delBalloonData.playerName);
 
 			if (!_command)

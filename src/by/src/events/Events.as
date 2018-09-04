@@ -5,6 +5,7 @@ package by.src.events
 		public static const SHOW_MESSAGE_BOX_ADD_PLAYER: String = "Events.SHOW_MESSAGE_BOX_ADD_PLAYER";
 		public static const SHOW_MESSAGE_BOX_ADD_POINTS: String = "Events.SHOW_MESSAGE_BOX_ADD_POINTS";
 		public static const SHOW_MESSAGE_BOX_DEL_BALLOON: String = "Events.SHOW_MESSAGE_BOX_DEL_BALLOON";
+		public static const SHOW_MESSAGE_BOX_END_GAME: String = "Events.SHOW_MESSAGE_BOX_END_GAME";
 
 		public static const ADD_POINTS_REQUEST: String = "Events.ADD_POINTS_REQUEST";
 		public static const ADD_POINTS_COMPLETE: String = "Events.ADD_POINTS_COMPLETE";
@@ -23,5 +24,8 @@ package by.src.events
 		public static const CHANGE_POSITION_BALLOONS: String = "Events.CHANGE_POSITION_BALLOONS";
 
 		public static const ADD_PARTICLES: String = "Events.ADD_PARTICLES";
+
+		public static const START_END_GAME: String = "Events.START_END_GAME";
+		public static const GAME_OVER: String = "Events.GAME_OVER";
 	}
 }

@@ -5,8 +5,9 @@ package by.src.menu
 	import by.src.events.Events;
 	import by.src.events.EventsDispatcher;
 	import by.src.gui.strategies.ChangeColorStrategy;
+	import by.src.menu.actions.EndGameAction;
 	import by.src.menu.actions.ShowMessageBoxAddPlayerAction;
-	import by.src.menu.actions.TestAction;
+	import by.src.menu.actions.ShowMessageBoxEndGameAction;
 	import by.src.menu.commands.ChangeVisibilityDelButtonBalloonsCommand;
 	import by.src.menu.commands.ConcreteCommand;
 	import by.src.menu.submenus.SubMenu;
@@ -28,7 +29,7 @@ package by.src.menu
 
 			_subMenu.setCommand(new ConcreteCommand(new ShowMessageBoxAddPlayerAction()));
 			_subMenu.setCommand(new ChangeVisibilityDelButtonBalloonsCommand());
-			_subMenu.setCommand(new ConcreteCommand(new TestAction()));
+			_subMenu.setCommand(new ConcreteCommand(new ShowMessageBoxEndGameAction()));
 
 			_subMenu.setButton(Language.ADD_PLAYER);
 			_subMenu.setToggle(Language.getText(Language.DEL_PLAYER), Language.getText(Language.DEL_PLAYER), new ChangeColorStrategy(0xFF9900, 0xFFFFFF));

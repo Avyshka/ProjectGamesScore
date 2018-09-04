@@ -8,6 +8,7 @@ package by.src.messageBox.managers
 	import by.src.messageBox.messageBoxes.MessageBoxAddPlayer;
 	import by.src.messageBox.messageBoxes.MessageBoxAddPoints;
 	import by.src.messageBox.messageBoxes.MessageBoxDelBalloonApproval;
+	import by.src.messageBox.messageBoxes.MessageBoxEndGameApproval;
 
 	import starling.events.Event;
 
@@ -21,6 +22,7 @@ package by.src.messageBox.managers
 			_dispatcher.addEventListener(Events.SHOW_MESSAGE_BOX_ADD_PLAYER, onShowAddPlayerMessageBox);
 			_dispatcher.addEventListener(Events.SHOW_MESSAGE_BOX_ADD_POINTS, onShowAddPointsMessageBox);
 			_dispatcher.addEventListener(Events.SHOW_MESSAGE_BOX_DEL_BALLOON, onShowDelBalloonMessageBox);
+			_dispatcher.addEventListener(Events.SHOW_MESSAGE_BOX_END_GAME, onShowEndGameMessageBox);
 		}
 
 		private function onShowAddPlayerMessageBox(event: Event): void
@@ -56,6 +58,16 @@ package by.src.messageBox.managers
 
 			_messageBox = ComponentPool.get(MessageBoxDelBalloonApproval);
 			_messageBox.addData(playerData);
+			_messageBox.init();
+		}
+
+		private function onShowEndGameMessageBox(event: Event): void
+		{
+			if (_messageBox)
+			{
+				_messageBox.free();
+			}
+			_messageBox = ComponentPool.get(MessageBoxEndGameApproval);
 			_messageBox.init();
 		}
 	}
